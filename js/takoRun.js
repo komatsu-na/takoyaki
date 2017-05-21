@@ -8,7 +8,7 @@ $(function(){
 });
 
 $(function() {
-  $("button").click(function() {
+  $("button").onClick(function() {
     if ($("#takoyaki").length < 1) {
       $("div").append("<img src='./image/takoyaki.gif' id='takoyaki'/>");
       var takoyaki = $("#takoyaki")
@@ -17,9 +17,6 @@ $(function() {
         "top": $("#tako").css("top"),
         "left": $("#tako").css("left")
       });
-      takoyaki.animate({
-        left: "40%"
-      }, 500)
       setTimeout(function() {
         takoyaki.remove();
       }, 500);
