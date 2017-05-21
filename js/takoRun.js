@@ -2,15 +2,16 @@
 $(function(){
   $("#tako").animate({
     top: "20%"
-  }, 1000).animate({
+  }, 2500).animate({
     top: "80%"
-  }, 1000);
+    // botton: "10%"
+  }, 2500);
   setTimeout(arguments.callee, 1000);
 });
 
 // タコ焼きをとばす
 $(function() {
-  $("button").click(function() {
+  $("button").onClick(function() {
     // 飛ばしたたこ焼きが消えるまでイベント無効
     if ($("#takoyaki").length < 1) {
       $("div").append("<img src='./image/takoyaki.gif' id='takoyaki'/>");
@@ -21,7 +22,7 @@ $(function() {
         "left": $("#tako").css("left")
       });
       takoyaki.animate({
-        left: "0%"
+        left: "40%"
       }, 500)
       setTimeout(function() {
         takoyaki.remove();
