@@ -1,17 +1,14 @@
-// タコを走らせる
 $(function(){
   $("#tako").animate({
     top: "20%"
-  }, 1000).animate({
+  }, 2500).animate({
     top: "80%"
-  }, 1000);
-  setTimeout(arguments.callee, 1000);
+  }, 2500);
+  setTimeout(arguments.callee, 5000);
 });
 
-// タコ焼きをとばす
 $(function() {
-  $("button").click(function() {
-    // 飛ばしたたこ焼きが消えるまでイベント無効
+  $("button").onClick(function() {
     if ($("#takoyaki").length < 1) {
       $("div").append("<img src='./image/takoyaki.gif' id='takoyaki'/>");
       var takoyaki = $("#takoyaki")
@@ -20,9 +17,6 @@ $(function() {
         "top": $("#tako").css("top"),
         "left": $("#tako").css("left")
       });
-      takoyaki.animate({
-        left: "0%"
-      }, 500)
       setTimeout(function() {
         takoyaki.remove();
       }, 500);
