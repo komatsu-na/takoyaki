@@ -1,10 +1,9 @@
 $(function(){
-  $("#tako").animate({
+  $("#button").animate({
     top: "20%"
   }, 2500).animate({
     top: "80%"
   }, 2500);
-  setTimeout(arguments.callee, 5000);
 });
 
 $(function() {
